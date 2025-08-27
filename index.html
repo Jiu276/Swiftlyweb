@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiftlyweb - Tech Reviews & Product Recommendations</title>
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <style>
+        /* Temporary inline styles for article grid */
+        .articles-grid {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr 1fr !important;
+            gap: 2rem !important;
+            min-height: 500px !important;
+            align-items: stretch !important;
+        }
+        
+        .featured-large {
+            grid-row: 1 / -1 !important;
+        }
+        
+        .featured-large .article-image {
+            height: 320px !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .article-card:not(.featured-large) .article-image {
+            height: 180px !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .article-image img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
+        }
+        
+        .article-content p {
+            color: #6b7280 !important;
+            margin-bottom: 1rem !important;
+            line-height: 1.6 !important;
+            flex-grow: 1 !important;
+        }
+        
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .featured-large {
+                grid-row: auto !important;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h1>
+                    <p class="tagline">Reviews & Recommendations</p>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" class="active" data-translate="nav-home">Home</a></li>
+                        <li><a href="pages/blog.html" data-translate="nav-blog">Blog</a></li>
+                        <li><a href="pages/products.html" data-translate="nav-products">Products</a></li>
+                        <li><a href="pages/about.html" data-translate="nav-about">About</a></li>
+                        <li><a href="pages/contact.html" data-translate="nav-contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="zh">中文</a>
+                            <a href="#" data-lang="es">Español</a>
+                            <a href="#" data-lang="fr">Français</a>
+                        </div>
+                    </div>
+                    <div class="search-toggle">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <form class="search-bar hidden" id="searchForm">
+                <input type="text" data-translate-placeholder="search-placeholder" placeholder="Search articles and products..." id="searchInput">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-translate="hero-title">Discover the Best Tech Products</h1>
+                    <p data-translate="hero-description">Expert reviews, in-depth comparisons, and honest recommendations for the latest technology products and platforms.</p>
+                    <div class="hero-buttons">
+                        <a href="pages/blog.html" class="btn btn-primary" data-translate="btn-latest-reviews">Latest Reviews</a>
+                        <a href="pages/products.html" class="btn btn-secondary" data-translate="btn-browse-products">Browse Products</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop" alt="Technology workspace" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="featured-articles">
+            <div class="container">
+                <h2 class="section-title" data-translate="featured-articles-title">Featured Articles</h2>
+                <div class="articles-grid">
+                    <article class="article-card featured-large">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800&h=600&fit=crop" alt="MacBook Pro Review" />
+                            <div class="article-category">Review</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>MacBook Pro M3 Max: The Ultimate Creative Powerhouse</h3>
+                            <p>After months of testing, we dive deep into Apple's latest MacBook Pro with M3 Max chip. Is it worth the premium price?</p>
+                            <div class="article-meta">
+                                <span class="date">August 15, 2025</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1593349480506-8433634cdcbe?w=400&h=300&fit=crop" alt="Gaming Setup" />
+                            <div class="article-category">Guide</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>Best Gaming Monitors Under $500</h3>
+                            <p>Top picks for budget-conscious gamers who don't want to compromise on quality.</p>
+                            <div class="article-meta">
+                                <span class="date">July 12, 2025</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=300&fit=crop" alt="Code Editor" />
+                            <div class="article-category">Platform</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>VS Code vs JetBrains: Which IDE Wins?</h3>
+                            <p>A comprehensive comparison of the two most popular development environments.</p>
+                            <div class="article-meta">
+                                <span class="date">June 10, 2025</span>
+                                <span class="read-time">10 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop" alt="Team Collaboration" />
+                            <div class="article-category">Platform</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>Top Project Management Tools for 2025</h3>
+                            <p>Streamline your workflow with these powerful project management platforms.</p>
+                            <div class="article-meta">
+                                <span class="date">May 8, 2025</span>
+                                <span class="read-time">7 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Recommendations -->
+        <section class="product-recommendations">
+            <div class="container">
+                <h2 class="section-title" data-translate="product-recommendations">Top Product Recommendations</h2>
+                <div class="products-carousel">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300&h=300&fit=crop" alt="AirPods Pro" />
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>AirPods Pro (2nd Gen)</h4>
+                            <p class="product-price">$249</p>
+                            <p class="product-description">Premium noise-canceling earbuds with spatial audio</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=300&fit=crop" alt="MacBook Air" />
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>MacBook Air M2</h4>
+                            <p class="product-price">$1,199</p>
+                            <p class="product-description">Ultra-portable laptop with incredible battery life</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="iPhone 15 Pro" />
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>iPhone 15 Pro</h4>
+                            <p class="product-price">$999</p>
+                            <p class="product-description">Professional photography with titanium design</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300&h=300&fit=crop" alt="Gaming Headset" />
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>SteelSeries Arctis 7P</h4>
+                            <p class="product-price">$149</p>
+                            <p class="product-description">Wireless gaming headset with surround sound</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title" data-translate="explore-categories">Explore Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Laptops</h3>
+                        <p>From ultrabooks to gaming machines</p>
+                        <a href="pages/blog.html?category=laptops" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Smartphones</h3>
+                        <p>Latest mobile technology reviews</p>
+                        <a href="pages/blog.html?category=smartphones" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3>Audio</h3>
+                        <p>Headphones, speakers, and more</p>
+                        <a href="pages/blog.html?category=audio" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Gaming</h3>
+                        <p>Gaming gear and accessories</p>
+                        <a href="pages/blog.html?category=gaming" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h3>
+                        <p>Your trusted source for technology reviews and recommendations.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="pages/blog.html?category=laptops">Laptops</a></li>
+                        <li><a href="pages/blog.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="pages/blog.html?category=audio">Audio</a></li>
+                        <li><a href="pages/blog.html?category=gaming">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest reviews and recommendations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swiftlyweb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/language.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

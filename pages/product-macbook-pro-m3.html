@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro M3 Max 16" - Product Details - Swiftlyweb</title>
+    <meta name="description" content="Detailed review and specifications of the MacBook Pro M3 Max 16 inch laptop.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Product page specific styles */
+        .product-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            color: white;
+            padding: 2rem 0 3rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+        
+        .breadcrumb span {
+            margin: 0 0.5rem;
+        }
+        
+        .product-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .product-gallery .main-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .product-info {
+            color: white;
+        }
+        
+        .product-category {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .product-info h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stars {
+            color: #ffd700;
+        }
+        
+        .rating-score {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .rating-count {
+            opacity: 0.8;
+        }
+        
+        .product-price {
+            margin-bottom: 2rem;
+        }
+        
+        .current-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4ade80;
+        }
+        
+        .product-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .product-highlights li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .product-highlights i {
+            color: #4ade80;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #8b5cf6;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Product Details Section */
+        .product-details {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+        
+        .details-nav {
+            margin-bottom: 3rem;
+        }
+        
+        .details-nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .details-nav li {
+            margin-right: 2rem;
+        }
+        
+        .details-nav a {
+            display: block;
+            padding: 1rem 0;
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .details-nav a.active,
+        .details-nav a:hover {
+            color: #8b5cf6;
+            border-bottom-color: #8b5cf6;
+        }
+        
+        .detail-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .detail-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+        }
+        
+        .detail-section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #334155;
+        }
+        
+        .detail-section p {
+            line-height: 1.6;
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-section ul {
+            margin-bottom: 2rem;
+        }
+        
+        .detail-section li {
+            margin-bottom: 0.5rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .spec-group h4 {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .spec-group ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .spec-group li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .spec-group li:last-child {
+            border-bottom: none;
+        }
+        
+        .performance-metrics {
+            margin-top: 2rem;
+        }
+        
+        .metric {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .metric-label {
+            min-width: 150px;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .metric-bar {
+            flex: 1;
+            height: 12px;
+            background: #e5e7eb;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .metric-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+            border-radius: 6px;
+            transition: width 0.3s ease;
+        }
+        
+        .metric-score {
+            min-width: 60px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .reviews-summary {
+            margin-bottom: 2rem;
+        }
+        
+        .overall-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        
+        .rating-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #8b5cf6;
+        }
+        
+        .rating-stars {
+            color: #ffd700;
+            font-size: 1.5rem;
+        }
+        
+        .rating-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .review-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1.5rem 0;
+        }
+        
+        .review-item:last-child {
+            border-bottom: none;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .review-rating {
+            color: #ffd700;
+        }
+        
+        @media (max-width: 768px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .product-info h1 {
+                font-size: 2rem;
+            }
+            
+            .current-price {
+                font-size: 2rem;
+            }
+            
+            .details-nav ul {
+                flex-wrap: wrap;
+            }
+            
+            .details-nav li {
+                margin-right: 1rem;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h1>
+                    <p class="tagline">Reviews & Recommendations</p>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="search-toggle">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="search-bar hidden">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Product Header -->
+        <section class="product-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span>/</span>
+                    <a href="products.html">Products</a>
+                    <span>/</span>
+                    <span>MacBook Pro M3 Max 16"</span>
+                </div>
+                
+                <div class="product-hero">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800&h=600&fit=crop" alt="MacBook Pro M3 Max 16 inch">
+                        </div>
+                    </div>
+                    
+                    <div class="product-info">
+                        <div class="product-category">Laptops</div>
+                        <h1>MacBook Pro M3 Max 16"</h1>
+                        
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-score">9.5/10</span>
+                            <span class="rating-count">(127 reviews)</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">$2,499</span>
+                        </div>
+                        
+                        <div class="product-highlights">
+                            <ul>
+                                <li><i class="fas fa-check"></i> M3 Max chip with 12-core CPU</li>
+                                <li><i class="fas fa-check"></i> 32GB unified memory</li>
+                                <li><i class="fas fa-check"></i> 1TB SSD storage</li>
+                                <li><i class="fas fa-check"></i> 16-inch Liquid Retina XDR display</li>
+                                <li><i class="fas fa-check"></i> Up to 22 hours battery life</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-large">
+                                <i class="fas fa-external-link-alt"></i>
+                                View on Apple Store
+                            </button>
+                            <button class="btn btn-secondary btn-large">
+                                <i class="fas fa-balance-scale"></i>
+                                Add to Compare
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details -->
+        <section class="product-details">
+            <div class="container">
+                <div class="details-nav">
+                    <ul>
+                        <li><a href="#overview" class="active">Overview</a></li>
+                        <li><a href="#specifications">Specifications</a></li>
+                        <li><a href="#performance">Performance</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="details-content">
+                    <div id="overview" class="detail-section active">
+                        <h2>Overview</h2>
+                        <p>The MacBook Pro M3 Max represents Apple's most powerful laptop, designed for creative professionals who demand uncompromising performance. With the revolutionary M3 Max chip, this machine delivers unprecedented power efficiency and computational capabilities.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>M3 Max Chip:</strong> 12-core CPU with 8 performance and 4 efficiency cores</li>
+                            <li><strong>Advanced GPU:</strong> Up to 40-core GPU for professional graphics workflows</li>
+                            <li><strong>Memory:</strong> 32GB unified memory with 400GB/s memory bandwidth</li>
+                            <li><strong>Display:</strong> 16-inch Liquid Retina XDR display with 1000 nits brightness</li>
+                            <li><strong>Connectivity:</strong> Three Thunderbolt 4 ports, HDMI, SDXC card slot</li>
+                        </ul>
+                        
+                        <h3>Who Is This For?</h3>
+                        <p>This MacBook Pro is ideal for video editors, 3D artists, software developers, and creative professionals who need maximum performance in a portable form factor.</p>
+                    </div>
+                    
+                    <div id="specifications" class="detail-section">
+                        <h2>Technical Specifications</h2>
+                        <div class="specs-grid">
+                            <div class="spec-group">
+                                <h4>Processor</h4>
+                                <ul>
+                                    <li>Apple M3 Max chip</li>
+                                    <li>12-core CPU (8P + 4E)</li>
+                                    <li>40-core GPU</li>
+                                    <li>16-core Neural Engine</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="spec-group">
+                                <h4>Memory & Storage</h4>
+                                <ul>
+                                    <li>32GB unified memory</li>
+                                    <li>1TB SSD storage</li>
+                                    <li>400GB/s memory bandwidth</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="spec-group">
+                                <h4>Display</h4>
+                                <ul>
+                                    <li>16-inch Liquid Retina XDR</li>
+                                    <li>3456 × 2234 resolution</li>
+                                    <li>1000 nits sustained brightness</li>
+                                    <li>P3 wide color gamut</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="spec-group">
+                                <h4>Connectivity</h4>
+                                <ul>
+                                    <li>3x Thunderbolt 4 (USB-C)</li>
+                                    <li>HDMI port</li>
+                                    <li>SDXC card slot</li>
+                                    <li>3.5mm headphone jack</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="performance" class="detail-section">
+                        <h2>Performance Analysis</h2>
+                        <p>Our comprehensive testing shows the MacBook Pro M3 Max delivers exceptional performance across all professional workflows.</p>
+                        
+                        <div class="performance-metrics">
+                            <div class="metric">
+                                <div class="metric-label">CPU Performance</div>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 95%"></div>
+                                </div>
+                                <div class="metric-score">95/100</div>
+                            </div>
+                            
+                            <div class="metric">
+                                <div class="metric-label">GPU Performance</div>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 92%"></div>
+                                </div>
+                                <div class="metric-score">92/100</div>
+                            </div>
+                            
+                            <div class="metric">
+                                <div class="metric-label">Battery Life</div>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 88%"></div>
+                                </div>
+                                <div class="metric-score">88/100</div>
+                            </div>
+                            
+                            <div class="metric">
+                                <div class="metric-label">Build Quality</div>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 98%"></div>
+                                </div>
+                                <div class="metric-score">98/100</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="reviews" class="detail-section">
+                        <h2>User Reviews</h2>
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <span class="rating-number">9.5</span>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">Exceptional</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-name">Alex Chen</div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Incredible performance for video editing. The M3 Max handles 4K ProRes footage without breaking a sweat."</p>
+                        </div>
+                        
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-name">Sarah Johnson</div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Best laptop I've ever owned. The display quality is phenomenal and battery life exceeds expectations."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h3>
+                        <p>Your trusted source for technology reviews and recommendations.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=laptops">Laptops</a></li>
+                        <li><a href="blog.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="blog.html?category=audio">Audio</a></li>
+                        <li><a href="blog.html?category=gaming">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest reviews and recommendations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swiftlyweb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Swiftlyweb</title>
+    <link rel="stylesheet" href="../css/style.css?v=3">
+    <link rel="stylesheet" href="../css/blog.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h1>
+                    <p class="tagline">Reviews & Recommendations</p>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="zh">中文</a>
+                            <a href="#" data-lang="es">Español</a>
+                            <a href="#" data-lang="fr">Français</a>
+                        </div>
+                    </div>
+                    <div class="search-toggle">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <form class="search-bar hidden" id="searchForm">
+                <input type="text" placeholder="Search articles..." id="searchInput">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Blog</h1>
+                <p>Latest technology reviews, guides, and platform recommendations</p>
+            </div>
+        </section>
+
+        <!-- Filters and Search -->
+        <section class="blog-filters">
+            <div class="container">
+                <div class="filter-wrapper">
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="all">All Posts</button>
+                        <button class="filter-btn" data-category="reviews">Reviews</button>
+                        <button class="filter-btn" data-category="guides">Guides</button>
+                        <button class="filter-btn" data-category="platforms">Platforms</button>
+                        <button class="filter-btn" data-category="laptops">Laptops</button>
+                        <button class="filter-btn" data-category="smartphones">Smartphones</button>
+                        <button class="filter-btn" data-category="audio">Audio</button>
+                        <button class="filter-btn" data-category="gaming">Gaming</button>
+                    </div>
+                    <div class="sort-options">
+                        <select id="sortSelect">
+                            <option value="date-desc">Latest First</option>
+                            <option value="date-asc">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="title">Title A-Z</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="blog-posts">
+            <div class="container">
+                <div class="posts-grid" id="postsGrid">
+                    <!-- Featured Post -->
+                    <article class="post-card featured" data-category="reviews" data-date="2025-08-15" data-popularity="95">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800&h=400&fit=crop" alt="MacBook Pro M3 Max Review" />
+                            <div class="post-category">Review</div>
+                        </div>
+                        <div class="post-content">
+                            <h2><a href="article-macbook-pro-m3.html">MacBook Pro M3 Max: The Ultimate Creative Powerhouse</a></h2>
+                            <p>After months of testing, we dive deep into Apple's latest MacBook Pro with M3 Max chip. Performance benchmarks, real-world usage, and whether it's worth the premium price.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Sarah Johnson" class="author-avatar">
+                                    <span class="author-name">Sarah Johnson</span>
+                                </div>
+                                <div class="post-date">August 15, 2025</div>
+                                <div class="read-time">8 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Regular Posts -->
+                    <article class="post-card" data-category="guides" data-date="2025-07-12" data-popularity="82">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1593349480506-8433634cdcbe?w=400&h=250&fit=crop" alt="Gaming Monitors Guide" />
+                            <div class="post-category">Guide</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-gaming-monitors.html">Best Gaming Monitors Under $500 in 2025</a></h3>
+                            <p>Top picks for budget-conscious gamers who don't want to compromise on quality. Complete buying guide with performance tests.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Mike Chen" class="author-avatar">
+                                    <span class="author-name">Mike Chen</span>
+                                </div>
+                                <div class="post-date">July 12, 2025</div>
+                                <div class="read-time">6 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" data-category="platforms" data-date="2025-06-10" data-popularity="78">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=250&fit=crop" alt="VS Code vs JetBrains" />
+                            <div class="post-category">Platform</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-vs-code-jetbrains.html">VS Code vs JetBrains: Which IDE Wins in 2025?</a></h3>
+                            <p>A comprehensive comparison of the two most popular development environments, covering features, performance, and pricing.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5e1?w=40&h=40&fit=crop&crop=face" alt="Emily Rodriguez" class="author-avatar">
+                                    <span class="author-name">Emily Rodriguez</span>
+                                </div>
+                                <div class="post-date">June 10, 2025</div>
+                                <div class="read-time">10 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" data-category="platforms" data-date="2025-05-08" data-popularity="85">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop" alt="Project Management Tools" />
+                            <div class="post-category">Platform</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-project-management.html">Top Project Management Tools for 2025</a></h3>
+                            <p>Streamline your workflow with these powerful project management platforms. Features comparison and pricing breakdown.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="David Kim" class="author-avatar">
+                                    <span class="author-name">David Kim</span>
+                                </div>
+                                <div class="post-date">May 8, 2025</div>
+                                <div class="read-time">7 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" data-category="smartphones" data-date="2025-04-06" data-popularity="91">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop" alt="iPhone 15 Pro Review" />
+                            <div class="post-category">Review</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-iphone-15-pro.html">iPhone 15 Pro: Is the Titanium Design Worth It?</a></h3>
+                            <p>Complete review of Apple's flagship smartphone, including camera tests, battery life, and build quality assessment.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Sarah Johnson" class="author-avatar">
+                                    <span class="author-name">Sarah Johnson</span>
+                                </div>
+                                <div class="post-date">April 6, 2025</div>
+                                <div class="read-time">12 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" data-category="audio" data-date="2025-03-04" data-popularity="73">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400&h=250&fit=crop" alt="AirPods Pro 2" />
+                            <div class="post-category">Review</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-airpods-pro-2.html">AirPods Pro 2nd Gen: Perfect Noise Cancellation?</a></h3>
+                            <p>Testing Apple's latest premium earbuds with improved noise cancellation and spatial audio features.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Mike Chen" class="author-avatar">
+                                    <span class="author-name">Mike Chen</span>
+                                </div>
+                                <div class="post-date">March 4, 2025</div>
+                                <div class="read-time">9 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" data-category="laptops" data-date="2025-02-02" data-popularity="88">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=250&fit=crop" alt="Dell XPS 13" />
+                            <div class="post-category">Review</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-dell-xps-13.html">Dell XPS 13 Plus: The Windows MacBook Alternative</a></h3>
+                            <p>Dell's premium ultrabook gets a complete redesign. How does it stack up against Apple's MacBook Air?</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5e1?w=40&h=40&fit=crop&crop=face" alt="Emily Rodriguez" class="author-avatar">
+                                    <span class="author-name">Emily Rodriguez</span>
+                                </div>
+                                <div class="post-date">February 2, 2025</div>
+                                <div class="read-time">11 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" data-category="gaming" data-date="2025-01-28" data-popularity="79">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=250&fit=crop" alt="Gaming Headset" />
+                            <div class="post-category">Review</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-gaming-headsets.html">Best Wireless Gaming Headsets Under $200</a></h3>
+                            <p>Top picks for immersive gaming audio without breaking the bank. Sound quality and comfort tested.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="David Kim" class="author-avatar">
+                                    <span class="author-name">David Kim</span>
+                                </div>
+                                <div class="post-date">January 28, 2025</div>
+                                <div class="read-time">8 min read</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card" data-category="guides" data-date="2025-01-26" data-popularity="86">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&h=250&fit=crop" alt="Coding Setup" />
+                            <div class="post-category">Guide</div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="article-coding-setup.html">Ultimate Home Office Setup for Developers</a></h3>
+                            <p>Create the perfect coding environment with our comprehensive guide to desks, monitors, keyboards, and more.</p>
+                            <div class="post-meta">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Mike Chen" class="author-avatar">
+                                    <span class="author-name">Mike Chen</span>
+                                </div>
+                                <div class="post-date">January 26, 2025</div>
+                                <div class="read-time">15 min read</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn btn-primary" id="loadMoreBtn">Load More Articles</button>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                    <button class="pagination-btn" id="prevBtn" disabled>
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <div class="page-numbers">
+                        <button class="page-btn active" data-page="1">1</button>
+                        <button class="page-btn" data-page="2">2</button>
+                        <button class="page-btn" data-page="3">3</button>
+                        <span class="page-dots">...</span>
+                        <button class="page-btn" data-page="8">8</button>
+                    </div>
+                    <button class="pagination-btn" id="nextBtn">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h3>
+                        <p>Your trusted source for technology reviews and recommendations.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=laptops">Laptops</a></li>
+                        <li><a href="blog.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="blog.html?category=audio">Audio</a></li>
+                        <li><a href="blog.html?category=gaming">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest reviews and recommendations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swiftlyweb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/language.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/blog.js"></script>
+</body>
+</html>

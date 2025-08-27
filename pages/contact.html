@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Swiftlyweb</title>
+    <meta name="description" content="Get in touch with the Swiftlyweb team. Send us your questions, feedback, or product review requests.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h1>
+                    <p class="tagline">Reviews & Recommendations</p>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="zh">中文</a>
+                            <a href="#" data-lang="es">Español</a>
+                            <a href="#" data-lang="fr">Français</a>
+                        </div>
+                    </div>
+                    <div class="search-toggle">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <form class="search-bar hidden" id="searchForm">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Contact Us</h1>
+                    <p>Have a question, feedback, or product suggestion? We'd love to hear from you. Get in touch with our team and we'll respond as quickly as possible.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="contact-main">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h2>Send us a message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="product-review">Product Review Request</option>
+                                    <option value="general-inquiry">General Inquiry</option>
+                                    <option value="press-inquiry">Press Inquiry</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="feedback">Website Feedback</option>
+                                    <option value="technical-issue">Technical Issue</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization (Optional)</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for the latest reviews and tech news
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" class="privacy-link">Privacy Policy</a> and <a href="#" class="privacy-link">Terms of Service</a>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loader hidden">
+                                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                                </span>
+                            </button>
+                        </form>
+                        
+                        <div class="form-success hidden">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for contacting us. We'll get back to you within 24-48 hours.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info-section">
+                        <h2>Get in touch</h2>
+                        <p>We're here to help and answer any questions you might have. We look forward to hearing from you!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email Us</h4>
+                                    <p>hello@swiftlyweb.com</p>
+                                    <p class="method-note">General inquiries and support</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Press Inquiries</h4>
+                                    <p>press@swiftlyweb.com</p>
+                                    <p class="method-note">Media relations and press releases</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Partnerships</h4>
+                                    <p>partnerships@swiftlyweb.com</p>
+                                    <p class="method-note">Business partnerships and collaborations</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Our Office</h4>
+                                    <p>San Francisco, CA</p>
+                                    <p class="method-note">By appointment only</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="response-time">
+                            <h4><i class="fas fa-clock"></i> Response Time</h4>
+                            <ul>
+                                <li><strong>General inquiries:</strong> 24-48 hours</li>
+                                <li><strong>Press inquiries:</strong> 12-24 hours</li>
+                                <li><strong>Partnership inquiries:</strong> 2-5 business days</li>
+                                <li><strong>Technical issues:</strong> 24 hours</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="social-contact">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>@swiftlyweb</span>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>SwiftlywebReviews</span>
+                                </a>
+                                <a href="#" class="social-link linkedin">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>Swiftlyweb</span>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>@swiftlyweb_tech</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do you choose which products to review?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We select products based on market relevance, user interest, and potential impact. We consider both flagship and budget options, prioritizing products that our readers are most likely to purchase or have questions about.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do you accept products from manufacturers?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we accept review units from manufacturers, but this never influences our editorial opinion. We maintain strict editorial independence and will always disclose when a product was provided for review. We also purchase products independently when necessary.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How long does your testing process take?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our testing process typically takes 2-4 weeks depending on the product category. Laptops and smartphones require extensive battery testing and long-term use evaluation, while accessories might have a shorter testing period.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I suggest a product for review?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We welcome product suggestions from our readers. Use the contact form above with "Product Review Request" as the subject, and tell us what you'd like us to review and why.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do you offer consulting services?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We focus primarily on our editorial content, but we do consider special consulting projects on a case-by-case basis. Please reach out via our partnerships email for more information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How can I advertise on your website?</h4>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer various advertising opportunities while maintaining our editorial independence. Contact our partnerships team for information about sponsored content, display advertising, and other promotional opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="newsletter-cta">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Stay Updated</h2>
+                        <p>Get the latest tech reviews, buying guides, and industry insights delivered directly to your inbox.</p>
+                    </div>
+                    <form class="newsletter-signup">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h3>
+                        <p>Your trusted source for technology reviews and recommendations.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=laptops">Laptops</a></li>
+                        <li><a href="blog.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="blog.html?category=audio">Audio</a></li>
+                        <li><a href="blog.html?category=gaming">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest reviews and recommendations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swiftlyweb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/language.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Swiftlyweb</title>
+    <meta name="description" content="Discover our curated selection of the best tech products with detailed reviews and recommendations.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h1>
+                    <p class="tagline">Reviews & Recommendations</p>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="zh">中文</a>
+                            <a href="#" data-lang="es">Español</a>
+                            <a href="#" data-lang="fr">Français</a>
+                        </div>
+                    </div>
+                    <div class="search-toggle">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <form class="search-bar hidden" id="searchForm">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Product Recommendations</h1>
+                <p>Carefully curated tech products that we've tested and recommend</p>
+            </div>
+        </section>
+
+        <!-- Product Filters -->
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-wrapper">
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="all">All Products</button>
+                        <button class="filter-btn" data-category="laptops">Laptops</button>
+                        <button class="filter-btn" data-category="smartphones">Smartphones</button>
+                        <button class="filter-btn" data-category="audio">Audio</button>
+                        <button class="filter-btn" data-category="gaming">Gaming</button>
+                        <button class="filter-btn" data-category="accessories">Accessories</button>
+                    </div>
+                    <div class="sort-options">
+                        <select id="sortSelect">
+                            <option value="rating">Highest Rated</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name A-Z</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="price-filter">
+                    <label>Price Range:</label>
+                    <div class="price-range">
+                        <input type="range" id="minPrice" min="0" max="5000" value="0">
+                        <input type="range" id="maxPrice" min="0" max="5000" value="5000">
+                    </div>
+                    <div class="price-values">
+                        <span id="minPriceValue">$0</span>
+                        <span id="maxPriceValue">$5000+</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Editor's Choice</h2>
+                <div class="featured-grid">
+                    <div class="product-item featured" data-category="laptops" data-price="2499" data-rating="9.5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=500&h=400&fit=crop" alt="MacBook Pro M3 Max">
+                            <div class="product-badge editor-choice">Editor's Choice</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-macbook-pro-m3.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Laptops</div>
+                            <h3><a href="product-macbook-pro-m3.html">MacBook Pro M3 Max 16"</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$2,499</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">M3 Max Chip</span>
+                                <span class="highlight">32GB RAM</span>
+                                <span class="highlight">1TB SSD</span>
+                            </div>
+                            <p class="product-description">The ultimate creative powerhouse with unprecedented performance and efficiency.</p>
+                            <div class="product-actions">
+                                <a href="product-macbook-pro-m3.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="products-grid-section">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- iPhone 15 Pro -->
+                    <div class="product-item" data-category="smartphones" data-price="999" data-rating="9.2">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop" alt="iPhone 15 Pro">
+                            <div class="product-badge best-seller">Best Seller</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.2</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-iphone-15-pro.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Smartphones</div>
+                            <h3><a href="product-iphone-15-pro.html">iPhone 15 Pro</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$999</span>
+                                <span class="original-price">$1,099</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">A17 Pro</span>
+                                <span class="highlight">Titanium</span>
+                                <span class="highlight">48MP Camera</span>
+                            </div>
+                            <p class="product-description">Professional photography meets titanium design in Apple's flagship smartphone.</p>
+                            <div class="product-actions">
+                                <a href="product-iphone-15-pro.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MacBook Air M2 -->
+                    <div class="product-item" data-category="laptops" data-price="1199" data-rating="9.0">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop" alt="MacBook Air M2">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.0</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-macbook-air-m2.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Laptops</div>
+                            <h3><a href="product-macbook-air-m2.html">MacBook Air M2</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$1,199</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">M2 Chip</span>
+                                <span class="highlight">18hr Battery</span>
+                                <span class="highlight">2.7lbs</span>
+                            </div>
+                            <p class="product-description">Ultra-portable laptop with incredible performance and all-day battery life.</p>
+                            <div class="product-actions">
+                                <a href="product-macbook-air-m2.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AirPods Pro 2 -->
+                    <div class="product-item" data-category="audio" data-price="249" data-rating="8.8">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400&h=300&fit=crop" alt="AirPods Pro 2nd Gen">
+                            <div class="product-badge new">New</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.8</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-airpods-pro-2.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Audio</div>
+                            <h3><a href="product-airpods-pro-2.html">AirPods Pro (2nd Gen)</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$249</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">Active ANC</span>
+                                <span class="highlight">Spatial Audio</span>
+                                <span class="highlight">30hr Battery</span>
+                            </div>
+                            <p class="product-description">Premium noise-canceling earbuds with exceptional sound quality.</p>
+                            <div class="product-actions">
+                                <a href="product-airpods-pro-2.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Monitor -->
+                    <div class="product-item" data-category="gaming" data-price="399" data-rating="8.7">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1593349480506-8433634cdcbe?w=400&h=300&fit=crop" alt="Gaming Monitor">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.7</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-gaming-monitor.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Gaming</div>
+                            <h3><a href="product-gaming-monitor.html">27" Gaming Monitor 165Hz</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$399</span>
+                                <span class="original-price">$499</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">165Hz</span>
+                                <span class="highlight">1ms</span>
+                                <span class="highlight">G-Sync</span>
+                            </div>
+                            <p class="product-description">High-refresh gaming monitor with stunning visual clarity and response time.</p>
+                            <div class="product-actions">
+                                <a href="product-gaming-monitor.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Headset -->
+                    <div class="product-item" data-category="gaming" data-price="149" data-rating="8.5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop" alt="Gaming Headset">
+                            <div class="product-badge value">Great Value</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.5</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-gaming-headset.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Gaming</div>
+                            <h3><a href="product-gaming-headset.html">SteelSeries Arctis 7P</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$149</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">Wireless</span>
+                                <span class="highlight">24hr Battery</span>
+                                <span class="highlight">DTS Audio</span>
+                            </div>
+                            <p class="product-description">Premium wireless gaming headset with surround sound and comfort.</p>
+                            <div class="product-actions">
+                                <a href="product-gaming-headset.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dell XPS 13 -->
+                    <div class="product-item" data-category="laptops" data-price="999" data-rating="8.9">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=300&fit=crop" alt="Dell XPS 13">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.9</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-dell-xps-13.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Laptops</div>
+                            <h3><a href="product-dell-xps-13.html">Dell XPS 13 Plus</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$999</span>
+                                <span class="original-price">$1,199</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">12th Gen Intel</span>
+                                <span class="highlight">OLED Display</span>
+                                <span class="highlight">Ultra Thin</span>
+                            </div>
+                            <p class="product-description">Premium Windows ultrabook with stunning display and modern design.</p>
+                            <div class="product-actions">
+                                <a href="product-dell-xps-13.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wireless Keyboard -->
+                    <div class="product-item" data-category="accessories" data-price="129" data-rating="8.4">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=300&fit=crop" alt="Wireless Keyboard">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.4</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-keyboard.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Accessories</div>
+                            <h3><a href="product-keyboard.html">Magic Keyboard</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$129</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">Scissor Keys</span>
+                                <span class="highlight">Rechargeable</span>
+                                <span class="highlight">Compact</span>
+                            </div>
+                            <p class="product-description">Elegant wireless keyboard with comfortable typing and long battery life.</p>
+                            <div class="product-actions">
+                                <a href="product-keyboard.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smartphone -->
+                    <div class="product-item" data-category="smartphones" data-price="799" data-rating="8.6">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" alt="Samsung Galaxy S24">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>8.6</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-galaxy-s24.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Smartphones</div>
+                            <h3><a href="product-galaxy-s24.html">Samsung Galaxy S24</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$799</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">Snapdragon 8</span>
+                                <span class="highlight">200MP Camera</span>
+                                <span class="highlight">AI Features</span>
+                            </div>
+                            <p class="product-description">Flagship Android phone with advanced AI features and excellent cameras.</p>
+                            <div class="product-actions">
+                                <a href="product-galaxy-s24.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Studio Headphones -->
+                    <div class="product-item" data-category="audio" data-price="329" data-rating="9.1">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Studio Headphones">
+                            <div class="product-badge premium">Premium</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>9.1</span>
+                            </div>
+                            <div class="product-overlay">
+                                <a href="product-studio-headphones.html" class="view-product-btn">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Audio</div>
+                            <h3><a href="product-studio-headphones.html">Sony WH-1000XM5</a></h3>
+                            <div class="product-price">
+                                <span class="current-price">$329</span>
+                                <span class="original-price">$399</span>
+                            </div>
+                            <div class="product-highlights">
+                                <span class="highlight">ANC</span>
+                                <span class="highlight">30hr Battery</span>
+                                <span class="highlight">Hi-Res Audio</span>
+                            </div>
+                            <p class="product-description">Industry-leading noise cancellation with exceptional audio quality.</p>
+                            <div class="product-actions">
+                                <a href="product-studio-headphones.html" class="btn btn-primary">View Details</a>
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-container">
+                    <button class="btn btn-primary" id="loadMoreBtn">Load More Products</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Tool -->
+        <section class="comparison-banner">
+            <div class="container">
+                <div class="comparison-content">
+                    <div class="comparison-text">
+                        <h3>Compare Products</h3>
+                        <p>Add products to compare specifications, prices, and ratings side by side</p>
+                    </div>
+                    <div class="comparison-counter">
+                        <span id="compareCount">0</span> products selected
+                    </div>
+                    <button class="btn btn-primary" id="compareBtn" disabled>Compare</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h3>
+                        <p>Your trusted source for technology reviews and recommendations.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=laptops">Laptops</a></li>
+                        <li><a href="blog.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="blog.html?category=audio">Audio</a></li>
+                        <li><a href="blog.html?category=gaming">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest reviews and recommendations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swiftlyweb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/language.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>

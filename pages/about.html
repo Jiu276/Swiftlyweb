@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Swiftlyweb</title>
+    <meta name="description" content="Learn about our mission, team, and commitment to providing honest technology reviews and recommendations.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h1>
+                    <p class="tagline">Reviews & Recommendations</p>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">EN</span>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="zh">中文</a>
+                            <a href="#" data-lang="es">Español</a>
+                            <a href="#" data-lang="fr">Français</a>
+                        </div>
+                    </div>
+                    <div class="search-toggle">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <form class="search-bar hidden" id="searchForm">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>About Swiftlyweb</h1>
+                    <p class="hero-subtitle">Your trusted source for honest technology reviews, in-depth comparisons, and expert recommendations since 2019.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" alt="Our team working together" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h2>Our Mission</h2>
+                        <p>At Swiftlyweb, we believe technology should empower and simplify your life, not complicate it. Our mission is to cut through the marketing noise and provide honest, comprehensive reviews that help you make informed decisions about the tech products you invest in.</p>
+                        <p>We test every product extensively, consider real-world use cases, and always prioritize your needs over manufacturer relationships. Our independence is our strength, and your trust is our greatest achievement.</p>
+                        
+                        <div class="mission-stats">
+                            <div class="stat">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Products Tested</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">2M+</div>
+                                <div class="stat-label">Monthly Readers</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Reader Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission-image">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=500&fit=crop" alt="Technology testing lab" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Independence</h3>
+                        <p>We maintain complete editorial independence. Our reviews are never influenced by manufacturer relationships, advertising revenue, or external pressure.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Thorough Testing</h3>
+                        <p>Every product undergoes rigorous real-world testing across multiple scenarios. We use standardized benchmarks and subjective evaluations to provide complete insights.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>User-Focused</h3>
+                        <p>We consider diverse use cases and user needs. Our recommendations account for different budgets, skill levels, and preferences to serve our entire community.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Transparency</h3>
+                        <p>We clearly disclose our testing methodology, potential conflicts of interest, and the reasoning behind our conclusions. You deserve complete transparency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5e1?w=300&h=300&fit=crop&crop=face" alt="Sarah Johnson">
+                        </div>
+                        <div class="member-info">
+                            <h3>Sarah Johnson</h3>
+                            <p class="member-title">Editor-in-Chief & Senior Reviewer</p>
+                            <p class="member-bio">8+ years covering consumer technology with previous experience at TechCrunch and The Verge. Specializes in laptops, smartphones, and emerging tech trends.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Mike Chen">
+                        </div>
+                        <div class="member-info">
+                            <h3>Mike Chen</h3>
+                            <p class="member-title">Gaming & Audio Specialist</p>
+                            <p class="member-bio">Professional gaming background with expertise in high-performance hardware, gaming peripherals, and audio equipment. Former esports competitor turned tech journalist.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-twitch"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Emily Rodriguez">
+                        </div>
+                        <div class="member-info">
+                            <h3>Emily Rodriguez</h3>
+                            <p class="member-title">Mobile & Wearables Expert</p>
+                            <p class="member-bio">Former software engineer turned tech reviewer with deep expertise in mobile devices, wearables, and consumer electronics. Focus on user experience and practical applications.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="David Kim">
+                        </div>
+                        <div class="member-info">
+                            <h3>David Kim</h3>
+                            <p class="member-title">Enterprise & Productivity Tech</p>
+                            <p class="member-bio">15+ years in IT consulting and enterprise solutions. Covers business laptops, productivity software, networking equipment, and workplace technology trends.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-medium"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <h2 class="section-title">Our Review Process</h2>
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Product Selection</h3>
+                            <p>We carefully select products based on market relevance, user interest, and potential impact. We cover both flagship and budget options across all categories.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Comprehensive Testing</h3>
+                            <p>Products undergo weeks of real-world testing across multiple scenarios. We use standardized benchmarks, subjective evaluations, and long-term durability assessments.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Expert Analysis</h3>
+                            <p>Our team of specialists analyzes performance data, build quality, user experience, and value proposition to form comprehensive conclusions.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Peer Review</h3>
+                            <p>Every review undergoes internal peer review by other team members to ensure accuracy, completeness, and objectivity before publication.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Ongoing Updates</h3>
+                            <p>We revisit our reviews periodically to account for software updates, price changes, and long-term reliability observations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards-section">
+            <div class="container">
+                <h2 class="section-title">Recognition & Awards</h2>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Tech Journalism Excellence</h3>
+                        <p class="award-year">2025</p>
+                        <p>Consumer Technology Association</p>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Best Tech Review Site</h3>
+                        <p class="award-year">2025</p>
+                        <p>Digital Media Awards</p>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Editorial Independence Award</h3>
+                        <p class="award-year">2025</p>
+                        <p>Journalism Ethics Institute</p>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Reader's Choice Award</h3>
+                        <p class="award-year">2025</p>
+                        <p>Tech Community Forum</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Get In Touch</h2>
+                    <p>Have a product you'd like us to review? Questions about our testing methodology? We'd love to hear from you.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                        <a href="blog.html" class="btn btn-secondary">Read Our Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><span class="logo-swift">Swift</span><span class="logo-web">lyweb</span></h3>
+                        <p>Your trusted source for technology reviews and recommendations.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=laptops">Laptops</a></li>
+                        <li><a href="blog.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="blog.html?category=audio">Audio</a></li>
+                        <li><a href="blog.html?category=gaming">Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest reviews and recommendations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swiftlyweb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/language.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
